@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDom from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 interface IProps {}
 interface IState {}
@@ -20,7 +21,14 @@ class Welcome extends Component<IProps, IState> {
       <div>
         <p style={this.styles}>Hello from Welcome Component</p>
         <p> {this.props.message} </p>
-        <button onClick={() => {this.props.getChildData("I am coming from Child Component")}}> Click Me </button>
+        <button
+          className="btn btn-primary"
+          onClick={() => {
+            this.props.getChildData("I am coming from Child Component");
+          }}
+        >
+          Click Me
+        </button>
       </div>
     );
   }
