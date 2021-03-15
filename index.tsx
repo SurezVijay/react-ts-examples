@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import Hello from "./Hello";
 import "./style.css";
+import Welcome from "./Welcome";
 
 interface IProps {
-  //name: string;
+  message: string;
 }
 interface IState {}
 
@@ -21,6 +22,7 @@ class App extends Component<IProps, IState> {
     return (
       <div>
         <h1> Hello I am From React </h1>
+        <Welcome message="Good Morning" getChildData={this.getChildData} />
       </div>
     );
   }
